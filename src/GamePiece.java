@@ -32,4 +32,22 @@ public class GamePiece {
     public void setColor(String color) {
         this.color = color;
     }
+
+//    methods
+    public void move(int positionX, int positionY) {
+        if (!this.frozen) {
+            this.positionX = positionX;
+            this.positionY = positionY;
+        } else if (this.frozen) {
+            System.out.println("TOUGH COOKIES, YOU'RE FROZEN! Try again later.");
+        }
+    }
+
+    public void freeze() {
+        this.frozen = true;
+    }
+
+    public void unfreeze() {
+        this.frozen = false;
+    }
 }
